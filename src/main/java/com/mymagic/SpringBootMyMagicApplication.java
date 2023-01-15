@@ -18,7 +18,7 @@ public class SpringBootMyMagicApplication
 	private static  Logger log = LoggerFactory.getLogger(SpringBootMyMagicApplication.class);
 	public static void main(String[] args) 
 	{
-		log.info("+-------------- <CacheManager studentInfo> -----------------------+" );
+		log.info("+-------------- <CacheManager studentInfo Begin> -----------------------+" );
 		SpringApplication.run(SpringBootMyMagicApplication.class, args);
 	}
  

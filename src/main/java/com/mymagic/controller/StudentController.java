@@ -42,8 +42,9 @@ public class StudentController {
 	@PostConstruct
     private void postConstruct() 
 	{
-		log.info("+-----------< StudentController.postConstruct Prova GIT>---------------------+");
-		log.info("+-----------< StudentController.postConstruct Prova GIT>---------------------+");
+		log.info("+-----------< StudentController.postConstruct Prova GIT1>---------------------+");
+		log.info("+-----------< StudentController.postConstruct Prova GIT2>---------------------+");
+		log.info("+-----------< StudentController.postConstruct Prova GIT3>---------------------+");
 		
     }
 	

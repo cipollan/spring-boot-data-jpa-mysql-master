@@ -43,6 +43,8 @@ public class StudentController {
     private void postConstruct() 
 	{
 		log.info("+-----------< StudentController.postConstruct Prova GIT>---------------------+");
+		log.info("+-----------< StudentController.postConstruct Prova GIT>---------------------+");
+		
     }
 	
 	 @PreDestroy

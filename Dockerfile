@@ -5,6 +5,9 @@ COPY ${JAR_FILE} app.jar
 
 From openjdk:8
 copy ./target/*.jar employee-jdbc-0.0.1-SNAPSHOT.jar
+
+ADD target/employee-jdbc-0.0.1-SNAPSHOT.jar  employee-jdbc-0.0.1-SNAPSHOT.jar
+ADD target/*.jar   app.jar
 CMD ["java","-jar","employee-jdbc-0.0.1-SNAPSHOT.jar"]
 RUN logs -f 34 
 RUN ls -ltr ${JAR_FILE}

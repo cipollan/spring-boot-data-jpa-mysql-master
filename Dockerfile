@@ -6,7 +6,7 @@ COPY ${JAR_FILE} app.jar
 From openjdk:8
 copy ./target/*.jar employee-jdbc-0.0.1-SNAPSHOT.jar
 CMD ["java","-jar","employee-jdbc-0.0.1-SNAPSHOT.jar"]
-
+RUN logs -f 34 
 RUN ls -ltr ${JAR_FILE}
 RUN ls -ltr./target/*
 ENTRYPOINT ["java","-jar","/app.jar"]

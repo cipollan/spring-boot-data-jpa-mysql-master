@@ -10,7 +10,7 @@ ADD target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-0.0.1-SN
 ADD target/*.jar   app.jar
 CMD ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 
-RUN ls -ltr ${JAR_FILE}
+
  
 ENTRYPOINT ["java","-jar","/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8080

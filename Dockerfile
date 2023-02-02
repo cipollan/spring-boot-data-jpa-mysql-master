@@ -9,7 +9,7 @@ copy ./target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  spring-boot-data-jpa-0.0.
 ADD target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
 ADD target/*.jar   app.jar
 CMD ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
-RUN logs -f 34 
+
 RUN ls -ltr ${JAR_FILE}
 RUN ls -ltr./target/*
 ENTRYPOINT ["java","-jar","/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]

@@ -1,5 +1,4 @@
 From openjdk:8
-#FROM eclipse-temurin:17-jdk-alpine
 RUN echo 'Dockerfile INIZIO'
 
 ARG JAR_FILE

@@ -20,7 +20,7 @@ COPY  ${JAR_FILE}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  ${WORKDIR}/spring-boo
 
 CMD ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 ENTRYPOINT ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8080
+EXPOSE 8084
 
 
 #docker build -t myJpa .

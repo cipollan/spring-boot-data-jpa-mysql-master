@@ -2,7 +2,7 @@ FROM openjdk:8
 RUN echo 'Dockerfile INIZIO'
 
 ARG JAR_FILE=./target
-WORKDIR /app
+ARG WORKDIR=/app
 
 RUN echo $JAR_FILE 
 
@@ -13,9 +13,8 @@ COPY ${JAR_FILE}/*  app.jar
 RUN echo 'we are running some # of cool things'
 
 
-COPY . .
 
-COPY  ${JAR_FILE}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
+COPY  ${JAR_FILE}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  ${WORKDIR}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
 
 #ADD ./target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
 
@@ -24,6 +23,6 @@ ENTRYPOINT ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8080
 
 
-#docker build -t getting-started .
+#docker build -t myJpa .
 
  

@@ -23,6 +23,7 @@ ENTRYPOINT ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8084
 
 
+
 #docker build -t myJpa .
 
  

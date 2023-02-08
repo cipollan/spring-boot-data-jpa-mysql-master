@@ -29,12 +29,12 @@ WORKDIR /app
 COPY . .
 RUN mvn clean install
 
-RUN mvn spring-boot:run
+#RUN mvn spring-boot:run
 
 
 #docker build -t myjpa .
 #docker build -t image_name .
 
-CMD docker-compose up
+RUN docker-compose up
 
  

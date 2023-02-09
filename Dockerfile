@@ -22,9 +22,7 @@ CMD ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 ENTRYPOINT ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8084
 
-
 FROM maven:3.8.2-jdk-8
-
 WORKDIR /app
 COPY . .
 RUN mvn clean install
@@ -35,6 +33,6 @@ RUN mvn clean install
 #docker build -t myjpa .
 #docker build -t image_name .
 
-RUN docker-compose up
+#RUN docker-compose up
 
  

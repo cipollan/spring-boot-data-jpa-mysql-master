@@ -15,16 +15,11 @@ COPY *.xml  /app
 RUN echo 'we are running some # of cool things'
 
 
-
-
-
 COPY  ${JAR_FILE}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  ${WORKDIR}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
 
 #ADD ./target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
 
-
-
-FROM mysql:8.0.17
+# FROM mysql:8.0.17
 #
 # NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
 #

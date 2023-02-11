@@ -1,6 +1,4 @@
 
-
-
 FROM oraclelinux:8-slim
 
 RUN set -eux; \

@@ -119,24 +119,3 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 EXPOSE 3306 33060
 CMD ["mysqld"]
 
-
-CMD ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
-ENTRYPOINT ["java","-jar","spring-boot-data-jpa-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8084
-
-FROM maven:3.8.2-jdk-8
-WORKDIR /app
-COPY . .
-COPY *.xml  ${WORKDIR}
-COPY *.xml  /app
-RUN mvn clean install
-RUN mvn spring-boot:run
-
-
-#docker build -t myjpa .
-#docker build -t image_name .
-
-#RUN docker-compose up
-#docker build - < Dockerfile
-
- 

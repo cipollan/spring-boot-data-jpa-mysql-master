@@ -111,10 +111,10 @@ RUN set -eux; \
 
 VOLUME /var/lib/mysql
 
-RUN chmod 777 docker-entrypoint.sh
-    
+#RUN chmod 777 docker-entrypoint.sh
+#RUN chmod +x  docker-entrypoint.sh    
 
-COPY docker-entrypoint.sh /usr/local/bin/
+#COPY  docker-entrypoint.sh /usr/local/bin/
 RUN ln -s /usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 ENTRYPOINT ["docker-entrypoint.sh"]
 

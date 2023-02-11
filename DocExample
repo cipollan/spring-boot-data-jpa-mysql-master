@@ -11,3 +11,26 @@ ENTRYPOINT ["java","-jar","/app.jar"]
  
  
  ---------------------------------------------------------
+ 
+ FROM openjdk:8
+RUN echo 'Dockerfile INIZIO'
+
+ARG JAR_FILE=./target
+ARG WORKDIR=/app
+
+RUN echo $JAR_FILE 
+
+RUN echo 'JAR_FILE=${JAR_FILE}' ${JAR_FILE}
+
+COPY ${JAR_FILE}/*  app.jar
+COPY *.xml  ${WORKDIR}
+COPY *.xml  /app
+
+RUN echo 'we are running some # of cool things'
+
+
+COPY  ${JAR_FILE}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar  ${WORKDIR}/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
+
+#ADD ./target/spring-boot-data-jpa-0.0.1-SNAPSHOT.jar spring-boot-data-jpa-0.0.1-SNAPSHOT.jar
+
+# FROM mysql:8.0.17

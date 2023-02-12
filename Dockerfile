@@ -11,6 +11,7 @@ ENV MYSQL_ROOT_PASSWORD Andrea
 
 RUN echo ${MYSQL_ROOT_PASSWORD}
 
+
  
 
 # add gosu for easy step-down from root

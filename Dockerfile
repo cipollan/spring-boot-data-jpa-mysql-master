@@ -9,7 +9,7 @@ ENV MYSQL_USER andrea
 ENV MYSQL_PASSWORD andrea
 
 # Copy the schema file to the container
-COPY schema.sql /docker-entrypoint-initdb.d/
+#COPY schema.sql /docker-entrypoint-initdb.d/
 
 
 EXPOSE 3306 33060

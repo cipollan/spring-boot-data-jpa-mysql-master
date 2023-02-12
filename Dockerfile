@@ -139,5 +139,3 @@ CMD ["mysqld"]
 
 #RUN docker-compose up
 #docker build - < Dockerfile
-
- 

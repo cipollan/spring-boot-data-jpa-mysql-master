@@ -5,6 +5,13 @@ FROM oraclelinux:8-slim
 RUN set -eux; \
 	groupadd --system --gid 999 mysql; \
 	useradd --system --uid 999 --gid 999 --home-dir /var/lib/mysql --no-create-home mysql
+	
+	
+ENV MYSQL_ROOT_PASSWORD Andrea
+
+RUN echo ${MYSQL_ROOT_PASSWORD}
+
+ 
 
 # add gosu for easy step-down from root
 # https://github.com/tianon/gosu/releases
